@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="API docs for the ago function from the ago library, for the Dart programming language.">
+  <title>ago function - ago library - Dart API</title>
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="..">
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500,400i,400,300|Source+Sans+Pro:400,300,700" rel="stylesheet">
+  <link rel="stylesheet" href="static-assets/github.css">
+  <link rel="stylesheet" href="static-assets/styles.css">
+  <link rel="icon" href="static-assets/favicon.png">
+
+</head>
+
+<body>
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">ago</a></li>
+    <li><a href="ago/ago-library.html">ago</a></li>
+    <li class="self-crumb">ago function</li>
+  </ol>
+  <div class="self-name">ago</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<main>
+
+  <div class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
+    <h5>ago library</h5>
+    <ol>
+    
+    
+    
+      <li class="section-title"><a href="ago/ago-library.html#functions">Functions</a></li>
+      <li><a href="ago/ago.html">ago</a></li>
+    
+    
+    
+    </ol>
+  </div><!--/.sidebar-offcanvas-left-->
+
+  <div class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>ago function</h1>
+
+    <section class="multi-line-signature">
+        <span class="returntype">String</span>
+        <span class="name ">ago</span>
+(<wbr><span class="parameter" id="ago-param-date"><span class="type-annotation">DateTime</span> <span class="parameter-name">date</span>, </span> <span class="parameter" id="ago-param-comparedWith"><span class="type-annotation">DateTime</span> <span class="parameter-name">comparedWith</span></span>)
+    </section>
+    
+    <section class="summary source-code" id="source">
+      <h2><span>Implementation</span> </h2>
+      <pre class="language-dart"><code class="language-dart">String ago(DateTime date, DateTime comparedWith) {
+  final _comparedWith = comparedWith ?? DateTime.now();
+
+  if (date.isAfter(_comparedWith)) {
+    return date.toString();
+  }
+
+  final diffDuration = _comparedWith.difference(date);
+  final diffDurationInDays = diffDuration.inDays;
+  final diffDurationInHours = diffDuration.inHours;
+  final diffDurationInMinutes = diffDuration.inMinutes;
+
+  if (diffDurationInDays &gt; 0) {
+    return date.toString();
+  } else if (diffDurationInHours &gt; 0) {
+    return &quot;$diffDurationInHours 小时以前&quot;;
+  } else if (diffDurationInMinutes &gt; 5) {
+    return &quot;$diffDurationInMinutes 分钟以前&quot;;
+  } else {
+    return &quot;刚刚&quot;;
+  }
+}</code></pre>
+    </section>
+
+  </div> <!-- /.main-content -->
+
+  <div class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    ago 0.0.1
+  </span>
+
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
+<script src="static-assets/highlight.pack.js"></script>
+<script src="static-assets/URI.js"></script>
+<script src="static-assets/script.js"></script>
+
+
+</body>
+
+</html>
