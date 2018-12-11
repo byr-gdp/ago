@@ -2,6 +2,20 @@
 
 A new Flutter package project for displaying fuzzy time.
 
+## Install
+
+Add dependency to your pubspec.yaml:
+
+```yaml
+ago: any
+```
+
+Get the packages:
+
+```shell
+flutter packages get
+```
+
 ## Usage
 
 ```dart

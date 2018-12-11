@@ -1,6 +1,6 @@
 library ago;
 
-String ago(DateTime date, DateTime comparedWith) {
+String ago(DateTime date, [DateTime comparedWith]) {
   final _comparedWith = comparedWith ?? DateTime.now();
 
   if (date.isAfter(_comparedWith)) {

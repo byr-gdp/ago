@@ -1,6 +1,6 @@
 name: ago
-description: A new Flutter package project.
-version: 0.0.2
+description: A new Flutter package project for displaying fuzzy time. Just for learning about how the dart packages work.
+version: 0.0.4
 author: byr-gdp <anthozoan77@gmail.com>
 homepage: https://github.com/byr-gdp/ago
 
